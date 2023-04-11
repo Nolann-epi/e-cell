@@ -25,16 +25,16 @@ const Caroussel = () => {
 
   const renderArrow = (
     direction: string,
-    clickHandler: React.MouseEventHandler<HTMLDivElement> | undefined
+    clickHandler: React.MouseEventHandler<HTMLDivElement> | any
   ) => (
     <div
-      className={`absolute top-0 bottom-0 ${direction}-0 flex justify-center items-center p-8 md:p-12 lg:p-16 opacity-30 hover:opacity-100 cursor-pointer z-20`}
-      onClick={clickHandler}
+      className={`lg:absolute hidden top-0 bottom-0 ${direction}-0 lg:left-6s flex justify-center items-center  z-20`}
     >
       <FaArrowCircleLeft
-        className={`lg:w-12 lg:h-12 w-8 h-8 text-primal transform ${
+        className={`lg:w-12 lg:h-12 w-8 h-8 text-primal opacity-30  transform hover:opacity-100 cursor-pointer ${
           direction === "left" ? "" : "rotate-180"
         }`}
+        onClick={clickHandler}
       />
     </div>
   );
@@ -64,7 +64,7 @@ const Caroussel = () => {
       autoPlay
       infiniteLoop
       showStatus={false}
-      className="h-[calc(100vh-78px)] w-full"
+      className="md:h-[calc(90vh-78px)] h-[calc(100vh-78px)] w-full px-10 md:px-14 lg:px-16"
       renderArrowPrev={(clickHandler) => renderArrow("left", clickHandler)}
       renderArrowNext={(clickHandler) => renderArrow("right", clickHandler)}
       renderIndicator={renderIndicator}

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { ImHome } from "react-icons/im";
+import { BsPhoneFlip } from "react-icons/bs";
 
 const Navbar = () => {
   return (
@@ -8,7 +9,8 @@ const Navbar = () => {
       <div
         className={` w-full  transition duration-[0.8s] ease-in-out flex flex-row items-center py-5 px-10 md:px-14 lg:px-16 border-b-2 border-transparent bg z-40`}
       >
-        <h1 className="font-extrabold text-xl md:text-3xl pr-16  text-black">
+        <BsPhoneFlip className="text-2xl text-primal" />
+        <h1 className="font-extrabold text-xl md:text-3xl pr-16  text-primal">
           E-CELL
         </h1>
         <div className="lg:flex hidden flex-row items-center h-full gap-16 "></div>

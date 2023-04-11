@@ -28,11 +28,11 @@ const Caroussel = () => {
     clickHandler: React.MouseEventHandler<HTMLDivElement> | undefined
   ) => (
     <div
-      className={`absolute top-0 bottom-0 ${direction}-0 flex justify-center items-center p-16 opacity-30 hover:opacity-100 cursor-pointer z-20`}
+      className={`absolute top-0 bottom-0 ${direction}-0 flex justify-center items-center p-8 md:p-12 lg:p-16 opacity-30 hover:opacity-100 cursor-pointer z-20`}
       onClick={clickHandler}
     >
       <FaArrowCircleLeft
-        className={`w-12 h-12 text-primal transform ${
+        className={`lg:w-12 lg:h-12 w-8 h-8 text-primal transform ${
           direction === "left" ? "" : "rotate-180"
         }`}
       />

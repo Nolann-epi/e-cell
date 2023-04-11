@@ -10,11 +10,11 @@ const Navbar = () => {
       >
         <h1 className="font-extrabold text-3xl pr-16  text-black">E-CELL</h1>
         <div className="lg:flex hidden flex-row items-center h-full gap-16 "></div>
-        <div className="ml-auto flex flex-row gap-6 items-center">
+        <div className="ml-auto flex flex-row gap-8 items-center">
           <ImHome className="text-2xl hidden lg:flex text-primal" />
           <div className="">
             <FaShoppingCart className="text-2xl text-primal" />
-            <div className="absolute top-3 ml-6 bg-red-500 rounded-full text-xs px-1 text-white text-center font-bold">
+            <div className="absolute top-3 ml-6 bg-red-500 rounded-full text-xs px-1 text-white text-center flex justify-center items-center font-bold">
               0
             </div>
           </div>

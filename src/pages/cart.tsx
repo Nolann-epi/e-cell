@@ -1,6 +1,6 @@
-import CartMenu from "@/components/CartMenu";
+import CartMenu from "@/components/Cart/CartMenu";
 import Navbar from "@/components/Navbar";
-import PriceMenu from "@/components/PriceMenu";
+import PriceMenu from "@/components/Cart/PriceMenu";
 import { useCallback, useState } from "react";
 
 const Auth = () => {

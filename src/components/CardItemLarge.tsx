@@ -1,6 +1,8 @@
 import React from "react";
 
 const CardItemLarge = () => {
+  const url = `url('/images/apple/apple-iphone-12-pro-max.webp')`;
+
   return (
     <div className="h-80 md:w-3/4 flex flex-row p-6 border-2 border-slate-300 shadow-md ">
       <div className="h-full w-1/2 flex flex-col gap-4 justify-center">
@@ -14,7 +16,10 @@ const CardItemLarge = () => {
           BUY NOW
         </button>
       </div>
-      <div className="h-full w-1/2 bg-yellow-500"></div>
+      <div
+        className={`h-full w-1/2 bg-contain bg-center bg-no-repeat`}
+        style={{ backgroundImage: `${url}` }}
+      ></div>
     </div>
   );
 };

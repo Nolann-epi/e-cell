@@ -1,10 +1,23 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import { FaArrowCircleLeft } from "react-icons/fa";
+import { FaArrowCircleLeft, FaSpinner } from "react-icons/fa";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CarousselItem from "./CarousselItem";
+interface ItemProps {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  price: number;
+  rating: number;
+  type: string;
+  brand: string;
+}
+interface CarousselProps {
+  items: ItemProps[];
+}
 
-const Caroussel = () => {
+const Caroussel = ({ items }: CarousselProps) => {
   const indicatorStyle = {
     marginLeft: 20,
     color: "#15b7b9",
@@ -59,6 +72,12 @@ const Caroussel = () => {
     );
   };
 
+  if (items === undefined)
+    return (
+      <div className="flex md:h-[calc(90vh-78px)] h-[calc(100vh-78px)] w-full justify-center items-center">
+        <FaSpinner className="animate-spin text-5xl text-primal" />
+      </div>
+    );
   return (
     <Carousel
       autoPlay
@@ -70,9 +89,9 @@ const Caroussel = () => {
       renderArrowNext={(clickHandler) => renderArrow("right", clickHandler)}
       renderIndicator={renderIndicator}
     >
-      <CarousselItem />
-      <CarousselItem />
-      <CarousselItem />
+      <CarousselItem item={items[0]} />
+      <CarousselItem item={items[0]} />
+      <CarousselItem item={items[0]} />
     </Carousel>
   );
 };

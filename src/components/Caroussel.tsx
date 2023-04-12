@@ -72,6 +72,8 @@ const Caroussel = ({ items }: CarousselProps) => {
     );
   };
 
+  const shuffledItems = items?.sort(() => Math.random() - 0.5);
+
   if (items === undefined)
     return (
       <div className="flex md:h-[calc(90vh-78px)] h-[calc(100vh-78px)] w-full justify-center items-center">
@@ -89,9 +91,9 @@ const Caroussel = ({ items }: CarousselProps) => {
       renderArrowNext={(clickHandler) => renderArrow("right", clickHandler)}
       renderIndicator={renderIndicator}
     >
-      <CarousselItem item={items[0]} />
-      <CarousselItem item={items[0]} />
-      <CarousselItem item={items[0]} />
+      <CarousselItem item={shuffledItems[0]} />
+      <CarousselItem item={shuffledItems[1]} />
+      <CarousselItem item={shuffledItems[2]} />
     </Carousel>
   );
 };

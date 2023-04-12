@@ -1,40 +1,26 @@
 import React, { useState } from "react";
 import CardItem from "./CardItem";
 
-const AllProductContainer = () => {
+interface ItemProps {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  price: number;
+  rating: number;
+  type: string;
+  brand: string;
+}
+
+interface AllProductContainerProps {
+  items: ItemProps[];
+}
+
+const AllProductContainer = ({ items }: AllProductContainerProps) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const data = {
-    elements: [
-      "Element 1",
-      "Element 2",
-      "Element 3",
-      "Element 4",
-      "Element 5",
-      "Element 6",
-      "Element 7",
-      "Element 8",
-      "Element 9",
-      "Element 10",
-      "Element 11",
-      "Element 12",
-      "Element 13",
-      "Element 14",
-      "Element 15",
-      "Element 16",
-      "Element 17",
-      "Element 18",
-      "Element 19",
-      "Element 20",
-      "Element 21",
-      "Element 22",
-      "Element 23",
-      "Element 24",
-      "Element 25",
-    ],
-  };
 
   const elementsPerPage = 9;
-  const pagesCount = Math.ceil(data.elements.length / elementsPerPage);
+  const pagesCount = Math.ceil(items?.length / elementsPerPage);
 
   const handleClick = (page: any) => {
     setCurrentPage(page);
@@ -59,11 +45,16 @@ const AllProductContainer = () => {
   };
 
   const renderCards = () => {
+    if (!items) {
+      return <div className="text-2xl font-semibold">No items found</div>;
+    }
     const startIndex = (currentPage - 1) * elementsPerPage;
     const endIndex = startIndex + elementsPerPage;
-    return data.elements
+    const shuffledItems = items?.sort(() => Math.random() - 0.5);
+
+    return shuffledItems
       .slice(startIndex, endIndex)
-      .map((element, key) => <CardItem element={element} key={key} />);
+      .map((item, index) => <CardItem item={item} key={index} />);
   };
 
   return (

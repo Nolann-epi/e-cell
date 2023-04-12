@@ -30,7 +30,7 @@ const CarousselItem = ({ item }: CarousselItemProps) => {
       </div>
       <div
         style={{ backgroundImage: `${url}` }}
-        className={` w-[400px] lg:h-4/5 h-[60vh] bg-fit bg-center bg-no-repeat`}
+        className={` w-[400px]  lg:h-3/5 h-[60vh] bg-contain bg-center bg-no-repeat`}
       ></div>
     </div>
   );

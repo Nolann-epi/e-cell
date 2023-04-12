@@ -22,8 +22,8 @@ export default function Home({ session }: any) {
       <div className=" w-screen h-full flex flex-col">
         <Caroussel items={items} />
         <div className="w-full h-fit px-10 md:px-14 lg:px-16 pt-6 flex flex-col">
-          <ExclusiveContainer />
-          <AllProductContainer />
+          <ExclusiveContainer items={items} />
+          <AllProductContainer items={items} />
         </div>
         <div className="h-20"></div>
       </div>

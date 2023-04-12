@@ -63,6 +63,7 @@ const Caroussel = () => {
     <Carousel
       autoPlay
       infiniteLoop
+      showThumbs={false}
       showStatus={false}
       className="md:h-[calc(90vh-78px)] h-[calc(100vh-78px)] w-full px-10 md:px-14 lg:px-16"
       renderArrowPrev={(clickHandler) => renderArrow("left", clickHandler)}

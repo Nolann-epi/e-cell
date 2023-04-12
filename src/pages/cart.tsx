@@ -1,25 +1,27 @@
 import CartMenu from "@/components/Cart/CartMenu";
 import Navbar from "@/components/Navbar";
 import PriceMenu from "@/components/Cart/PriceMenu";
+import { NextPageContext } from "next";
+import { getSession } from "next-auth/react";
 import { useCallback, useState } from "react";
 
-const Auth = () => {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  //const login = useLogin(email, password);
-  const [errorMessage, setErrorMessage] = useState("");
+export async function getServerSideProps(context: NextPageContext) {
+  const session = await getSession(context);
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/auth",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+}
 
-  //   const handleRegister = useCallback(async () => {
-  //     if (!username || !email || !password) {
-  //       setErrorMessage("Please fill all the fields");
-  //       return;
-  //     }
-  //     let response = await register();
-  //     if (response?.status !== 200) {
-  //       console.log(response);
-  //       setErrorMessage(response?.message);
-  //     }
-  //   }, [register]);
+const Cart = () => {
+  const [errorMessage, setErrorMessage] = useState("");
 
   return (
     <>
@@ -35,4 +37,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default Cart;

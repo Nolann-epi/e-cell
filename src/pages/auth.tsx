@@ -1,25 +1,24 @@
 import AuthForm from "@/components/Auth/AuthForm";
 import Navbar from "@/components/Navbar";
-import { useCallback, useState } from "react";
+import { NextPageContext } from "next";
+import { getSession } from "next-auth/react";
+
+export async function getServerSideProps(context: NextPageContext) {
+  const session = await getSession(context);
+  if (session) {
+    return {
+      redirect: {
+        destination: "/cart",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: {},
+  };
+}
 
 const Auth = () => {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  //const login = useLogin(email, password);
-  const [errorMessage, setErrorMessage] = useState("");
-
-  //   const handleRegister = useCallback(async () => {
-  //     if (!username || !email || !password) {
-  //       setErrorMessage("Please fill all the fields");
-  //       return;
-  //     }
-  //     let response = await register();
-  //     if (response?.status !== 200) {
-  //       console.log(response);
-  //       setErrorMessage(response?.message);
-  //     }
-  //   }, [register]);
-
   return (
     <>
       <Navbar />

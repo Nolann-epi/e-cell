@@ -28,7 +28,7 @@ const Caroussel = () => {
     clickHandler: React.MouseEventHandler<HTMLDivElement> | any
   ) => (
     <div
-      className={` hidden md:flex md:absolute md:bottom-0 md:top-0 ${direction}-0  flex justify-center items-center  z-20`}
+      className={` hidden md:flex md:absolute md:bottom-0 md:top-0 ${direction}-0  justify-center items-center  z-20`}
     >
       <FaArrowCircleLeft
         className={`lg:w-12 lg:h-12 w-8 h-8 text-primal opacity-30  transform hover:opacity-100 cursor-pointer ${

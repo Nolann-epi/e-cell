@@ -7,25 +7,17 @@ import { useCallback, useState } from "react";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
-  if (!session) {
-    return {
-      redirect: {
-        destination: "/auth",
-        permanent: false,
-      },
-    };
-  }
   return {
-    props: {},
+    props: { session },
   };
 }
 
-const Cart = () => {
+const Cart = ({ session }: any) => {
   const [errorMessage, setErrorMessage] = useState("");
 
   return (
     <>
-      <Navbar />
+      <Navbar session={session} />
       <div className="h-fit w-screen bg-white lg:px-16 md:px-14 px-4 ">
         <div className="w-full h-fit lg:flex-row-reverse flex-col-reverse flex lg:justify-center lg:items-start lg:gap-16 min-w-[350px]">
           <div className="md:hidden h-10"></div>

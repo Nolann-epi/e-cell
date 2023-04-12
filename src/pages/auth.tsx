@@ -14,14 +14,14 @@ export async function getServerSideProps(context: NextPageContext) {
     };
   }
   return {
-    props: {},
+    props: { session },
   };
 }
 
-const Auth = () => {
+const Auth = ({ session }: any) => {
   return (
     <>
-      <Navbar />
+      <Navbar session={session} />
       <div className="h-[calc(100vh-78px)] w-screen">
         <div className="h-full w-full bg-primal opacity-80 flex justify-center pt-36">
           <AuthForm />

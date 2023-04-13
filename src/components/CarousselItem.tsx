@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 interface ItemProps {
@@ -15,6 +16,7 @@ interface CarousselItemProps {
 }
 
 const CarousselItem = ({ item }: CarousselItemProps) => {
+  const router = useRouter();
   const url = item.imageUrl;
   return (
     <div className="md:h-[calc(90vh-78px)] h-[calc(100vh-78px)] w-full flex lg:flex-row flex-col-reverse justify-center items-center gap-8">
@@ -24,7 +26,10 @@ const CarousselItem = ({ item }: CarousselItemProps) => {
           {item.description.substring(0, 100) + "..."}
         </p>
         <span className="text-xl font-medium">{item.price + " $"}</span>
-        <button className="bg-primal text-white px-4 py-2 rounded-xs font-bold w-fit ">
+        <button
+          onClick={() => router.push(`/item/${item?.id}`)}
+          className="bg-primal text-white px-4 py-2 rounded-xs font-bold w-fit "
+        >
           BUY NOW
         </button>
       </div>

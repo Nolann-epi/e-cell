@@ -41,11 +41,11 @@ const Caroussel = ({ items }: CarousselProps) => {
     clickHandler: React.MouseEventHandler<HTMLDivElement> | any
   ) => (
     <div
-      className={` hidden md:flex md:absolute md:bottom-0 md:top-0 ${direction}-0  justify-center items-center  z-20`}
+      className={` hidden md:flex md:absolute md:bottom-0 md:top-0 ${direction} justify-center items-center  z-20`}
     >
       <FaArrowCircleLeft
         className={`lg:w-12 lg:h-12 w-8 h-8 text-primal opacity-30  transform hover:opacity-100 cursor-pointer ${
-          direction === "left" ? "" : "rotate-180"
+          direction === "left-0" ? "" : "rotate-180"
         }`}
         onClick={clickHandler}
       />
@@ -87,8 +87,8 @@ const Caroussel = ({ items }: CarousselProps) => {
       showThumbs={false}
       showStatus={false}
       className="md:h-[calc(90vh-78px)] h-[calc(100vh-78px)] w-full px-10 md:px-14 lg:px-16"
-      renderArrowPrev={(clickHandler) => renderArrow("left", clickHandler)}
-      renderArrowNext={(clickHandler) => renderArrow("right", clickHandler)}
+      renderArrowPrev={(clickHandler) => renderArrow("left-0", clickHandler)}
+      renderArrowNext={(clickHandler) => renderArrow("right-0", clickHandler)}
       renderIndicator={renderIndicator}
     >
       <CarousselItem item={shuffledItems[0]} />

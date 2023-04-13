@@ -1,0 +1,230 @@
+[
+    {
+        "_id": {
+            "$oid": "642e7ec4bc279d274b3e1e1e"
+        },
+        "title": "Samsung Galaxy S9",
+        "description": "Beautiful phone with a great camera and a very fast processor",
+        "imageUrl": "url('/images/samsung/SAMSUNG_Galaxy_S9_Purple.webp')",
+        "price": 99,
+        "rating": 4.3,
+        "type": "phone",
+        "brand": "Samsung"
+    },
+    {
+        "_id": {
+            "$oid": "642e7ec4bc279d274b3e1e13"
+        },
+        "title": "Google Pixel 6",
+        "description": "Beautiful google phone with a great camera and a very fast processor",
+        "imageUrl": "url('/images/google/google-pixel-6-oriole-256-gb-carbon-ga03300-us.webp')",
+        "price": 120,
+        "rating": 4.5,
+        "type": "phone",
+        "brand": "Google"
+    },
+    {
+        "_id": {
+            "$oid": "6234f934d78f4e4d3ba879c1"
+        },
+        "title": "Apple Iphone 3",
+        "description": "The Apple iPhone 3 was a revolutionary device when it launched in 2007, with its sleek design and touch screen interface.",
+        "imageUrl": "url('/images/apple/apple_iphone_3.png')",
+        "price": 49,
+        "rating": 3.5,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "6234f934d78f4e4d3ba879c2"
+        },
+        "title": "Apple Iphone 4",
+        "description": "The Apple iPhone 4 introduced a new design with a glass back and stainless steel frame, and also brought FaceTime video calling to the masses.",
+        "imageUrl": "url('/images/apple/apple_iphone_4.png')",
+        "price": 99,
+        "rating": 4.0,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "6234f934d78f4e4d3ba879c3"
+        },
+        "title": "Apple Iphone 11",
+        "description": "The Apple iPhone 11 features a stunning 6.1-inch Liquid Retina display, A13 Bionic chip, and dual-camera system with Ultra Wide and Wide lenses.",
+        "imageUrl": "url('/images/apple/Apple_iPhone_11.webp')",
+        "price": 699,
+        "rating": 4.6,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "642e7ec4bc279d274b3e1e12"
+        },
+        "title": "Apple Iphone 11 Pro",
+        "description": "Beautiful phone super super with a great camera and a very fast processor",
+        "imageUrl": "url('/images/apple/Apple_iPhone_11_Pro.webp')",
+        "price": 199,
+        "rating": 4.8,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "6234f934d78f4e4d3ba879c4"
+        },
+        "title": "Apple Iphone 12 Pro Max",
+        "description": "The Apple iPhone 12 Pro Max features a stunning 6.7-inch Super Retina XDR display, A14 Bionic chip, and Pro camera system with 12MP Ultra Wide, Wide, and Telephoto lenses.",
+        "imageUrl": "url('/images/apple/apple-iphone-12-pro-max.webp')",
+        "price": 1099,
+        "rating": 4.9,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "6234f934d78f4e4d3ba879c5"
+        },
+        "title": "Apple Iphone 12",
+        "description": "The Apple iPhone 12 features a beautiful 6.1-inch Super Retina XDR display, A14 Bionic chip, and dual-camera system with 12MP Ultra Wide and Wide lenses.",
+        "imageUrl": "url('/images/apple/apple-iphone-12.webp')",
+        "price": 799,
+        "rating": 4.7,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "6234f934d78f4e4d3ba879c6"
+        },
+        "title": "Apple Iphone 13 Mini",
+        "description": "The Apple iPhone 13 Mini features a compact 5.4-inch Super Retina XDR display, A15 Bionic chip, and dual-camera system with Night mode.",
+        "imageUrl": "url('/images/apple/apple-iphone-13-mini.webp')",
+        "price": 420,
+        "rating": 4.1,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "642e7ec4bc279d274b3e1e20"
+        },
+        "title": "Apple Iphone 14 Pro Max",
+        "description": "Experience the ultimate iPhone with the stunning 6.7-inch Super Retina XDR display, advanced triple-camera system, A16 Bionic chip, and exceptional durability with Ceramic Shield protection.",
+        "imageUrl": "url('/images/apple/iphone-14-pro-max-silver-fall22.webp')",
+        "price": 1399,
+        "rating": 4.9,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "642e7ec4bc279d274b3e1e21"
+        },
+        "title": "Apple Iphone 8",
+        "description": "The iPhone 8 features a 4.7-inch Retina HD display, a 12-megapixel camera, and A11 Bionic chip for fast performance. It also includes Touch ID for secure authentication and wireless charging capabilities.",
+        "imageUrl": "url('/images/apple/iPhone8_RED.webp')",
+        "price": 399,
+        "rating": 4.5,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "642e7ec4bc279d274b3e1e22"
+        },
+        "title": "Apple Iphone 8 Plus",
+        "description": "With a larger 5.5-inch Retina HD display and dual 12-megapixel cameras, the iPhone 8 Plus is perfect for capturing stunning photos and videos. It also includes A11 Bionic chip for fast performance and wireless charging capabilities.",
+        "imageUrl": "url('/images/apple/iPhone8Plus-SpGry.webp')",
+        "price": 499,
+        "rating": 4.7,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "642e7ec4bc279d274b3e1e23"
+        },
+        "title": "Apple Iphone X",
+        "description": "Featuring a stunning 5.8-inch Super Retina HD display, advanced Face ID technology for secure authentication, and A11 Bionic chip for fast performance, the iPhone X is a flagship device that pushes the boundaries of what a smartphone can do.",
+        "imageUrl": "url('/images/apple/iPhoneX-Svr.webp')",
+        "price": 699,
+        "rating": 4.8,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "642e7ec4bc279d274b3e1e24"
+        },
+        "title": "Apple Iphone Xr",
+        "description": "Get advanced features at an affordable price with the iPhone Xr. Featuring a 6.1-inch Liquid Retina display, A12 Bionic chip, and advanced camera system, the iPhone Xr is perfect for those who want a high-quality device without breaking the bank.",
+        "imageUrl": "url('/images/apple/iPhoneXr_Blue_PureAngles.webp')",
+        "price": 549,
+        "rating": 4.6,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "624e7ec4ac229d274b3e1e11"
+        },
+        "title": "Apple iPhone 13 Pro",
+        "description": "Experience the ultimate iPhone with the 13 Pro. Capture breathtaking photos and videos with the advanced camera system, and enjoy the stunning Super Retina XDR display. With 5G connectivity, the fastest A15 Bionic chip, and all-day battery life, this phone is a true powerhouse.",
+        "imageUrl": "url('/images/apple/apple-iphone-13-pro-max.webp')",
+        "price": 1099,
+        "rating": 4.9,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "624e7ec4ac229d274b3e1e12"
+        },
+        "title": "Apple iPhone 13",
+        "description": "Get your hands on the latest iPhone with the 13. Enjoy stunning photos and videos with the advanced camera system, and view them on the gorgeous Super Retina XDR display. With 5G connectivity, the A15 Bionic chip, and all-day battery life, this phone is a true workhorse.",
+        "imageUrl": "url('/images/apple/apple-iphone-13.webp')",
+        "price": 799,
+        "rating": 4.7,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "624e7ec4ac229d274b3e1e13"
+        },
+        "title": "Apple iPhone SE 2020",
+        "description": "Experience the power of Apple in a compact package with the SE. Enjoy the stunning Retina display and the advanced A13 Bionic chip, which provides lightning-fast performance. With Touch ID, you can easily unlock your phone and make secure purchases.",
+        "imageUrl": "url('/images/apple/apple-iphone-se-2020.webp')",
+        "price": 399,
+        "rating": 4.5,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "624e7ec4ac229d274b3e1e14"
+        },
+        "title": "Apple iPhone SE Pro",
+        "description": "Upgrade your iPhone game with the SE Pro. Enjoy the stunning OLED display and the advanced A14 Bionic chip, which provides lightning-fast performance. With Touch ID, you can easily unlock your phone and make secure purchases. With a water-resistant design, this phone can handle anything life throws at it.",
+        "imageUrl": "url('/images/apple/apple-iphone-se-Pro.webp')",
+        "price": 699,
+        "rating": 4.8,
+        "type": "phone",
+        "brand": "Apple"
+    },
+    {
+        "_id": {
+            "$oid": "623f9f79a7c2a435d7656fa1"
+        },
+        "title": "Apple iPhone XS Max",
+        "description": "Experience the power of the A12 Bionic chip with this stunning iPhone XS Max. With its 6.5-inch Super Retina display, you can enjoy your favorite movies and TV shows in crystal-clear detail. And thanks to its advanced camera system, you can capture every moment with stunning clarity and detail.",
+        "imageUrl": "url('/images/apple/apple-iphonexs-max.webp')",
+        "price": 799,
+        "rating": 4.9,
+        "type": "phone",
+        "brand": "Apple"
+    }
+]

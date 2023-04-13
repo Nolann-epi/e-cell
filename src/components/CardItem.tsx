@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
 
@@ -18,10 +19,12 @@ interface CardItemProps {
 
 const CardItem = ({ item, key }: CardItemProps) => {
   const url = item.imageUrl;
+  const router = useRouter();
   return (
     <div
       key={key}
-      className="w-96 h-96 flex flex-col  p-4 border-2 border-slate-300 shadow-md hover:scale-105 transition duration-300  ease-in-out"
+      className="w-96 h-96 flex flex-col  p-4 border-2 border-slate-300 shadow-md hover:scale-105 transition duration-300  ease-in-out cursor-pointer"
+      onClick={() => router.push(`/item/${item?.id}`)}
     >
       <div
         className={`w-full h-2/3  bg-contain bg-center bg-no-repeat`}

@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 interface ItemProps {
@@ -16,6 +17,7 @@ interface CardItemLargeProps {
 
 const CardItemLarge = ({ item }: CardItemLargeProps) => {
   const url = item.imageUrl;
+  const router = useRouter();
 
   return (
     <div className="h-80 md:w-3/4 flex flex-row p-6 border-2 border-slate-300 shadow-md ">
@@ -23,7 +25,10 @@ const CardItemLarge = ({ item }: CardItemLargeProps) => {
         <span className="text-2xl">{item.title}</span>
         <span className="text-2xl font-semibold">{item.price + " $"}</span>
         <p>{item.description.substring(0, 100) + "..."}</p>
-        <button className="bg-primal text-white px-4 py-2 rounded-xs font-bold w-fit ">
+        <button
+          onClick={() => router.push(`/item/${item?.id}`)}
+          className="bg-primal text-white px-4 py-2 rounded-xs font-bold w-fit "
+        >
           BUY NOW
         </button>
       </div>

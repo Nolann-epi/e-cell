@@ -13,8 +13,6 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 const Cart = ({ session }: any) => {
-  const [errorMessage, setErrorMessage] = useState("");
-
   return (
     <>
       <Navbar session={session} />

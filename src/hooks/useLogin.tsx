@@ -11,7 +11,7 @@ export const useLogin = (email: string, password: string) => {
         password,
         redirect: false,
       });
-      router.push("/cart");
+      if (result?.ok) router.push("/cart");
       return result;
     } catch (error: any) {
       console.log(error);

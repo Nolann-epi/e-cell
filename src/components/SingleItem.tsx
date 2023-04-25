@@ -1,5 +1,6 @@
 import React from "react";
 import { FaSpinner } from "react-icons/fa";
+import CartButton from "./Cart/CartButton";
 
 interface ItemProps {
   id: string;
@@ -28,9 +29,7 @@ const SingleItem = ({ item }: SingleItemProps) => {
         <h2 className="text-xl font-semibold">{item.title}</h2>
         <p className="text-base">{item.description}</p>
         <span className="text-xl font-medium">{item.price}$</span>
-        <button className="bg-primal text-white px-4 py-2 rounded-xs font-bold w-fit ">
-          Add to cart
-        </button>
+        <CartButton itemID={item.id} />
       </div>
       <div
         className=" w-[400px] lg:h-4/5 h-[60vh] bg-contain bg-no-repeat bg-center"

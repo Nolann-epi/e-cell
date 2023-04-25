@@ -4,6 +4,7 @@ import { ImHome } from "react-icons/im";
 import { BsPhoneFlip } from "react-icons/bs";
 import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
+import { useCart } from "@/context/CartContext";
 
 interface NavbarProps {
   session: any;
@@ -11,6 +12,7 @@ interface NavbarProps {
 
 const Navbar = ({ session }: NavbarProps) => {
   const router = useRouter();
+  const { itemNumber, setItemNumber } = useCart();
 
   return (
     <nav className="w-full relative h-fit  z-50">
@@ -18,7 +20,7 @@ const Navbar = ({ session }: NavbarProps) => {
         className={` w-full  transition duration-[0.8s] ease-in-out flex flex-row items-center py-5 px-10 md:px-14 lg:px-16 border-b-2 border-transparent bg z-40`}
       >
         <div
-          onClick={() => router.push("/")}
+          onClick={() => (router.pathname !== "/" ? router.push("/") : null)}
           className="cursor-pointer flex flex-row items-center gap-2 w-fit "
         >
           <BsPhoneFlip className="text-2xl text-primal" />
@@ -29,7 +31,7 @@ const Navbar = ({ session }: NavbarProps) => {
         <div className="lg:flex hidden flex-row items-center h-full gap-16 "></div>
         <div className="ml-auto flex flex-row gap-8 items-center">
           <ImHome
-            onClick={() => router.push("/")}
+            onClick={() => (router.pathname !== "/" ? router.push("/") : null)}
             className="text-2xl hidden lg:flex text-primal hover:scale-125 cursor-pointer transition duration-300 ease-in-out"
           />
           <div className="group">
@@ -38,7 +40,7 @@ const Navbar = ({ session }: NavbarProps) => {
               className="text-2xl text-primal  group-hover:scale-105 cursor-pointer transition duration-300 ease-in-out"
             />
             <div className="absolute top-3 ml-6 cursor-pointer transition duration-300 ease-in-out bg-red-500 rounded-full text-xs px-1 text-white text-center flex justify-center items-center font-bold">
-              0
+              {itemNumber}
             </div>
           </div>
           {session ? (

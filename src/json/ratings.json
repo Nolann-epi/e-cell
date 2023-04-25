@@ -1,0 +1,62 @@
+[
+  {
+    "name": "John Smith",
+    "rating": 3.5,
+    "comment": "I love this phone, it has everything I need!"
+  },
+  {
+    "name": "Emily Davis",
+    "rating": 4.2,
+    "comment": "This phone is amazing, it has such a great camera!"
+  },
+  {
+    "name": "William Johnson",
+    "rating": 4.9,
+    "comment": "I can't believe how fast this phone is, it's incredible!"
+  },
+  {
+    "name": "Emma Wilson",
+    "rating": 3.8,
+    "comment": "This phone is so stylish and sleek, I always get compliments on it!"
+  },
+  {
+    "name": "Michael Brown",
+    "rating": 4.1,
+    "comment": "The battery life on this phone is amazing, I never have to worry about it running out of charge!"
+  },
+  {
+    "name": "Olivia Taylor",
+    "rating": 4.5,
+    "comment": "I love the large screen on this phone, it's perfect for watching videos and browsing the web!"
+  },
+  {
+    "name": "James Jones",
+    "rating": 3.3,
+    "comment": "This phone has everything I need for staying organized and connected!"
+  },
+  {
+    "name": "Sophia Garcia",
+    "rating": 4.8,
+    "comment": "The camera on this phone is the best I've ever used, my photos always look amazing!"
+  },
+  {
+    "name": "David Brown",
+    "rating": 3.7,
+    "comment": "I love the design of this phone, it's both functional and stylish!"
+  },
+  {
+    "name": "Ava Rodriguez",
+    "rating": 4.6,
+    "comment": "The sound quality on this phone is amazing, I love listening to music and podcasts on it!"
+  },
+  {
+    "name": "Robert Martinez",
+    "rating": 3.2,
+    "comment": "This phone is great for gaming, it runs all my favorite games smoothly!"
+  },
+  {
+    "name": "Isabella Hernandez",
+    "rating": 4.3,
+    "comment": "I love how easy it is to use this phone, everything is so intuitive and user-friendly!"
+  }
+]

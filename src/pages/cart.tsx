@@ -4,6 +4,7 @@ import PriceMenu from "@/components/Cart/PriceMenu";
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import { useCallback, useState } from "react";
+import { useCart } from "@/context/CartContext";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -13,6 +14,7 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 const Cart = ({ session }: any) => {
+  const { itemNumber, setItemNumber } = useCart();
   return (
     <>
       <Navbar session={session} />

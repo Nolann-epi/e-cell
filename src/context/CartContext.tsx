@@ -8,11 +8,13 @@ interface ApiWrapperInterface {
 const CartContext = createContext({});
 
 export const CartContextWrapper = ({ children }: ApiWrapperInterface) => {
-  const [itemNumber, setItemNumber] = useState(0);
+  const [itemNumber, setItemNumber] = useState<number>(0);
   const [itemList, setItemList] = useState<string[]>([]);
   const { data } = useCurrentUser();
+  const [price, setPrice] = useState<number>(0);
 
   useEffect(() => {
+    if (!data?.favoritesItems) return;
     if (data) {
       setItemNumber(data?.favoritesItems?.length || 0);
       setItemList(data?.favoritesItems || []);
@@ -31,6 +33,8 @@ export const CartContextWrapper = ({ children }: ApiWrapperInterface) => {
         itemList,
         setItemList,
         isFavorite,
+        price,
+        setPrice,
       }}
     >
       {children}

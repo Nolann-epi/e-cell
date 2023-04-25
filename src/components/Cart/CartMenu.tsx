@@ -4,14 +4,14 @@ import { useCart } from "@/context/CartContext";
 import useFavorites from "@/hooks/useFavorites";
 
 const CartMenu = () => {
-  const { data: favorites, isLoading } = useFavorites();
+  const { data: favorites, isLoading, mutate } = useFavorites();
   const { itemList } = useCart();
 
   useEffect(() => {
     if (itemList.length !== favorites?.length) {
-      console.log("Need updates");
     }
-  }, [favorites, itemList.length]);
+    console.log(favorites?.length);
+  }, [favorites, itemList.length, mutate]);
 
   return (
     <div className=" w-full mb-2 h-fit min-h-[110px] px-6 py-3 border shadow-xl max-w-[850px] min-w-[350px]">
@@ -19,10 +19,9 @@ const CartMenu = () => {
         MY CART
       </h1>
       <div className="w-[80px] h-2 bg-primal mt-1" />
-      {!isLoading &&
-        favorites.map((item: any, key: number) => (
-          <CartMenuItem key={key} item={item} />
-        ))}
+      {itemList.map((item: any, key: number) => (
+        <CartMenuItem key={key} itemID={item} />
+      ))}
     </div>
   );
 };

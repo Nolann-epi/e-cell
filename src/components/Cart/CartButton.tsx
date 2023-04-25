@@ -24,6 +24,16 @@ const CartButton = ({ itemID }: CartButtonProps) => {
     }
   }, [cart, itemID]);
 
+  const toggleUnlogFavorites = useCallback(() => {
+    if (cart.isFavorite(itemID)) {
+      cart.setItemList(cart.itemList.filter((id: string) => id !== itemID));
+      cart.setItemNumber(cart.itemNumber - 1);
+    } else {
+      cart.setItemList([...cart.itemList, itemID]);
+      cart.setItemNumber(cart.itemNumber + 1);
+    }
+  }, [cart, itemID]);
+
   if (data && !isLoading) {
     return (
       <button
@@ -38,10 +48,12 @@ const CartButton = ({ itemID }: CartButtonProps) => {
   } else {
     return (
       <button
-        className="bg-primal text-white px-4 py-2 rounded-xs font-bold w-fit "
-        onClick={() => cart.setItemNumber(cart.itemNumber + 1)}
+        onClick={toggleUnlogFavorites}
+        className={` text-white px-4 py-2 rounded-xs font-bold w-fit ${
+          cart.isFavorite(itemID) ? "bg-red-500" : "bg-primal"
+        }`}
       >
-        Add to cart
+        {cart.isFavorite(itemID) ? "Remove from cart" : "Add to cart"}
       </button>
     );
   }

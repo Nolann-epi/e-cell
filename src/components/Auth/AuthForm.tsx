@@ -1,3 +1,4 @@
+import { useCart } from "@/context/CartContext";
 import { useLogin } from "@/hooks/useLogin";
 import React, { useCallback, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
@@ -6,6 +7,7 @@ const AuthForm = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const { itemNumber, setItemNumber, itemList, setItemList } = useCart();
   const login = useLogin(email, password);
 
   const handleLogin = useCallback(async () => {
@@ -17,8 +19,11 @@ const AuthForm = () => {
     let response = await login();
     if (response?.error) {
       setErrorMessage(response.error);
+    } else {
+      setItemNumber(0);
+      setItemList([]);
     }
-  }, [login, email, password]);
+  }, [login, email, password, setErrorMessage, setItemNumber, setItemList]);
 
   return (
     <div className="h-fit w-96  flex items-center bg-primal/70 flex-col py-8 px-12 rounded-xl shadow-2xl border-white border-2">

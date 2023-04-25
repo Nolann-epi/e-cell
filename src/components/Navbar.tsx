@@ -12,7 +12,14 @@ interface NavbarProps {
 
 const Navbar = ({ session }: NavbarProps) => {
   const router = useRouter();
-  const { itemNumber, setItemNumber } = useCart();
+  const { itemNumber, setItemNumber, setItemList } = useCart();
+
+  const toggleSignOut = async () => {
+    await signOut();
+    setItemNumber(0);
+    setItemList([]);
+    router.push("/");
+  };
 
   return (
     <nav className="w-full relative h-fit  z-50">
@@ -45,7 +52,7 @@ const Navbar = ({ session }: NavbarProps) => {
           </div>
           {session ? (
             <button
-              onClick={() => signOut()}
+              onClick={() => toggleSignOut()}
               className="bg-red-500 text-white px-4 py-1 rounded-md font-bold"
             >
               Logout

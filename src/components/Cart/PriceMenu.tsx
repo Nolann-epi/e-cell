@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useCart } from "@/context/CartContext";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import axios from "axios";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect } from "react";
 
 const PriceMenu = () => {
   const { itemList, setPrice, price } = useCart();
@@ -9,9 +10,7 @@ const PriceMenu = () => {
 
   const getCartFavorites = useCallback(async () => {
     const response = await axios.post("/api/cartfavorites", { data: itemList });
-    const data = response.data;
-
-    getTotalPrice(data);
+    getTotalPrice(response.data);
   }, [itemList]);
 
   const getTotalPrice = useCallback(
@@ -21,7 +20,6 @@ const PriceMenu = () => {
       data.forEach((item: any) => {
         total += item.price;
       });
-      console.log(data);
       if (data) setPrice(total);
     },
     [itemList]

@@ -4,13 +4,12 @@ import { useCart } from "@/context/CartContext";
 import useFavorites from "@/hooks/useFavorites";
 
 const CartMenu = () => {
-  const { data: favorites, isLoading, mutate } = useFavorites();
+  const { data: favorites, mutate } = useFavorites();
   const { itemList } = useCart();
 
   useEffect(() => {
     if (itemList.length !== favorites?.length) {
     }
-    console.log(favorites?.length);
   }, [favorites, itemList.length, mutate]);
 
   return (

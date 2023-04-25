@@ -3,12 +3,6 @@ import RatingItem from "./RatingItem";
 import ratings from "../json/ratings.json";
 
 const Rating = () => {
-  interface RatingItemProps {
-    name?: string;
-    rating?: number;
-    comment?: string;
-  }
-
   const [randomNumbers, setRandomNumbers] = useState<number[]>([1, 2, 3]);
 
   const getRandomNumbers = useCallback(() => {

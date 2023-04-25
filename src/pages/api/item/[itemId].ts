@@ -20,9 +20,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 id: itemId,
             }
         });
-        // if (!item) {
-        //     throw new Error('Invalid itemID');
-        // }
         return res.status(200).json(item);
     }
     catch (error) {

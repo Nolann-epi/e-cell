@@ -1,7 +1,7 @@
 import { useCart } from "@/context/CartContext";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import axios from "axios";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback } from "react";
 
 interface CartButtonProps {
   itemID: string;

@@ -2,11 +2,13 @@
 import { useCart } from "@/context/CartContext";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import axios from "axios";
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
+import CustomModal from "./CustomModal";
 
 const PriceMenu = () => {
   const { itemList, setPrice, price } = useCart();
   const user = useCurrentUser();
+  const [openModal, setOpenModal] = useState<boolean>(false);
 
   const getCartFavorites = useCallback(async () => {
     const response = await axios.post("/api/cartfavorites", { data: itemList });
@@ -59,11 +61,18 @@ const PriceMenu = () => {
         </div>
       </div>
       <div className="flex flex-col gap-3 mt-2">
-        <span className="text-green-500 w-full text-center text-sm">
-          {" "}
-          You saved {(price / 10).toFixed(2)}$ on this order
-        </span>
-        <button className=" bg-primal text-white px-6 py-3 rounded-md font-bold border-white border-2 hover:bg-white hover:text-primal hover:scale-105 transform duration-500 ease-in-out">
+        {price !== 0 && (
+          <span className="text-green-500 w-full text-center text-sm">
+            {" "}
+            You saved {(price / 10).toFixed(2)}$ on this order
+          </span>
+        )}
+        <button
+          onClick={() => {
+            setOpenModal(true);
+          }}
+          className=" bg-primal text-white px-6 py-3 rounded-md font-bold border-white border-2 hover:bg-white hover:border-primal hover:text-primal hover:scale-105 transform duration-500 ease-in-out"
+        >
           Place Order
         </button>
         {!user?.data ? (
@@ -73,6 +82,7 @@ const PriceMenu = () => {
           </span>
         ) : null}
       </div>
+      {openModal && <CustomModal setter={setOpenModal} isLogin={user?.data} />}
     </div>
   );
 };

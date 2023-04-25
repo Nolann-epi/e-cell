@@ -7,7 +7,7 @@ const AuthForm = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
-  const { itemNumber, setItemNumber, itemList, setItemList } = useCart();
+  const { setItemNumber, setItemList } = useCart();
   const login = useLogin(email, password);
 
   const handleLogin = useCallback(async () => {

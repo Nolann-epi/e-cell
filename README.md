@@ -1,5 +1,12 @@
 # E-CELL
 
+![DashboardPage](https://user-images.githubusercontent.com/62303354/234433818-37b36c27-16f7-4a91-ac7a-da038ecb1227.png)
+
+
+## Description
+
+E-Cell is a FAKE e-commerce plateform where you can buy phones of different brands. 
+
 # How to use
 
 Go to https://e-cell-theta.vercel.app
@@ -10,13 +17,6 @@ You can use the guest user :
 * Password : guest123
  
 (This user may already have items in his cart)
-
-## Description
-E-Cell is a FAKE e-commerce plateform where you can buy phones of different brands. 
-
-## Screenshot Dashboard
-
-![DashboardPage](https://user-images.githubusercontent.com/62303354/234433818-37b36c27-16f7-4a91-ac7a-da038ecb1227.png)
 
 ## Screenshot Items List
 

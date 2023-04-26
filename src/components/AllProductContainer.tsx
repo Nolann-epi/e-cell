@@ -48,13 +48,7 @@ const AllProductContainer = ({ items }: AllProductContainerProps) => {
     if (!items) {
       return <div className="text-2xl font-semibold">No items found</div>;
     }
-    const startIndex = (currentPage - 1) * elementsPerPage;
-    const endIndex = startIndex + elementsPerPage;
-    const shuffledItems = items?.sort(() => Math.random() - 0.5);
-
-    return shuffledItems
-      .slice(startIndex, endIndex)
-      .map((item, index) => <CardItem item={item} key={index} />);
+    return items.map((item, index) => <CardItem item={item} key={index} />);
   };
 
   return (

@@ -1,38 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-CELL
 
-## Getting Started
 
-First, run the development server:
+## Description
+E-Cell is a FAKE e-commerce plateform where you can buy phones of different brands. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Screenshot Dashboard
+![DashboardPage](https://user-images.githubusercontent.com/62303354/234433818-37b36c27-16f7-4a91-ac7a-da038ecb1227.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Screenshot Items List
+![DashboardPage2](https://user-images.githubusercontent.com/62303354/234433941-adb718e5-a7d1-4ecb-8ded-9e0c6485a73d.png)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Screenshot Login Page
+![LoginPage](https://user-images.githubusercontent.com/62303354/234433956-3664e11f-fe72-48e9-8325-666955d8befb.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Screenshot Cart Page
+![CartPage](https://user-images.githubusercontent.com/62303354/234433987-25c0ecbe-1a1d-440a-97ef-a1dbcb249682.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Screenshot Single Item Page
+![SingleItemPage](https://user-images.githubusercontent.com/62303354/234434013-0db7a80c-90fd-46ab-bb01-e4f6bce54f93.png)
 
-## Learn More
+# How to use
 
-To learn more about Next.js, take a look at the following resources:
+Go to https://e-cell-theta.vercel.app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can use the guest user :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* Email : guest@email.com
+* Password : guest123
+* 
+(This user may already have items in his cart)
 
-## Deploy on Vercel
+# Functionalities
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Netfake offers the following functionalities:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ * Items fetched from a database
+ * Carrousel of items
+ * Connect via credentials
+ * Add and delete items to a cart
+ * A logged cart connected to the user if logged in
+ * View ratings of items
+ * Price resume of the items
+
+# Technologies used
+
+The technologies used to build Netfake are:
+
+    Next.JS
+    TailwindCSS
+    MongoDB
+    Vercel
+    Prisma
+    Next-Auth
+    Axios
+    SWR
+    Lodash
+
+
+
+## Credits
+
+All the images phones images where taken from https://www.verizon.com/.
+You can't really buy from this website.
